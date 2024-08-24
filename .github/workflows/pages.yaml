@@ -2,8 +2,8 @@ name: Deploy Quartz site to GitHub Pages
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch:
+    - cron: '*/5 * * * *'
+  # workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,7 +27,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN_QUARTZ }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 20.x
       - name: Build
         run: |
           cd ./quartz
