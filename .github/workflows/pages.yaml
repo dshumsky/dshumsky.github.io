@@ -2,7 +2,7 @@ name: Deploy Quartz site to GitHub Pages
 
 on:
   schedule:
-    - cron: '57 */4 * * *' # every 4 hours
+    - cron: '57 */8 * * *' # every 4 hours
   workflow_dispatch:
 
 permissions:
